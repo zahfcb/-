@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زهرائيات الرياضة - شغفك إلى إنجاز</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Marhey:wght@500;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <!-- خط التوقيع اليدوي -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Parisienne&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* توقيع يدوي أنيق */
+        .handwritten-signature {
+            font-family: 'Dancing Script', 'Great Vibes', cursive;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 8px;
+            display: inline-block;
+            position: relative;
+            transform: rotate(-2deg);
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #d4af37, #ffd700, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding: 0 10px;
+        }
+
+        .signature-underline {
+            width: 180px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 5px auto 8px;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .signature-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 30%;
+            width: 40%;
+            height: 1px;
+            background: rgba(212, 175, 55, 0.3);
+        }
+
+        .signature-flourish {
+            position: absolute;
+            font-size: 1.2rem;
+            color: #d4af37;
+            opacity: 0.6;
+        }
+
+        .flourish-left {
+            top: -10px;
+            left: -15px;
+            transform: rotate(-15deg);
+        }
+
+        .flourish-right {
+            bottom: -5px;
+            right: -10px;
+            transform: rotate(15deg);
+        }
+
+        /* تأثير الاهتزاز الخفيف للتوقيع */
+        @keyframes signatureShake {
+            0%, 100% { transform: rotate(-2deg) translateX(0); }
+            25% { transform: rotate(-3deg) translateX(-1px); }
+            75% { transform: rotate(-1deg) translateX(1px); }
+        }
+
+        .handwritten-signature:hover {
+            animation: signatureShake 0.5s ease-in-out;
+        }
+
+        /* للتكيف مع الوضع الفاتح */
+        body.light-mode .handwritten-signature {
+            background: linear-gradient(45deg, #8b6914, #b8860b, #8b6914);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body.light-mode .signature-underline {
+            background: linear-gradient(90deg, transparent, #8b6914, transparent);
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>جاري التحميل...</p>
+    </div>
+
+    <div class="background-overlay"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="شعار الموقع">
+                </div>
+                <span>زهرائيات الرياضة</span>
+            </div>
+            <div class="menu-right">
+                <button id="theme-toggle" title="تغيير المظهر">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active">
+            <div class="intro-container">
+                <div class="floating-elements">
+                    <div class="floating-element element-1">⚽</div>
+                    <div class="floating-element element-2">🏆</div>
+                    <div class="floating-element element-3">⭐</div>
+                    <div class="floating-element element-4">🔥</div>
+                </div>
+                
+                <h1 class="main-title">
+                    <span class="word">حوّل</span>
+                    <span class="word animated-gradient">شغفك</span>
+                    <span class="word">إلى</span>
+                    <span class="word">إنجاز</span>
+                </h1>
+                
+                <div class="typewriter-container">
+                    <p class="typewriter-text" id="typewriter"></p>
+                </div>
+                
+                <p class="intro-description">اختبر معرفتك في عالم كرة القدم. استمتع بتجربة فريدة مع تحديات مصممة خصيصًا لأساطير المشجعين.</p>
+                
+                <div class="start-form">
+                    <input type="text" id="username" placeholder="ادخل اسمك الثلاثي الكامل *" required>
+                    <button id="start-journey-btn" class="cta-btn" disabled>اختر ناديك الآن</button>
+                </div>
+                
+                <div class="animated-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">نادي رياضي</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">سؤال ممتع</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="1000">0</span>
+                        <span class="stat-label">مشجع راضي</span>
+                    </div>
+                </div>
+                
+                <small class="designed-by">بواسطة: زهراء عدنان سعدي</small>
+            </div>
+        </section>
+
+        <section id="club-selection">
+            <div class="section-background" style="background-image: url('https://i.imgur.com/8X9qL2j.jpg')"></div>
+            <div class="section-content">
+                <h2>اختر النادي الذي يسري في عروقك</h2>
+                <p class="section-subtitle">اختبر معرفتك بناديك المفضل واكتشف مدى شغفك الحقيقي</p>
+                <div class="clubs-grid"></div>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <div class="section-background" style="background-image: url('https://i.imgur.com/9Y7wV3a.jpg')"></div>
+            <div class="section-content">
+                <div class="quiz-header">
+                    <div id="quiz-club-logo"></div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <span id="progress-text">0%</span>
+                </div>
+                <div id="question-container" class="question-card">
+                    <h3 id="question-title"></h3>
+                    <div id="options-container" class="options-grid"></div>
+                </div>
+                <div class="quiz-footer">
+                    <span id="question-counter"></span>
+                </div>
+            </div>
+        </section>
+
+       <section id="certificate">
+            <div class="section-background" style="background-image: url('https://i.imgur.com/5Z8wK2p.jpg')"></div>
+            <div class="section-content">
+                <h2>تهانينا! لقد أكملت التحدي بنجاح</h2>
+                <p class="section-subtitle">إنجازك يستحق التقدير، شارك شهادتك مع الأصدقاء</p>
+                
+                <div class="certificate-wrapper">
+                    <div class="certificate-container" id="certificate-to-download">
+                        
+                        <div class="certificate-header">
+                            <div class="cert-logo">
+                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="شعار الشهادة">
+                            </div>
+                            <div class="cert-title">
+                                <h1>شهادة إنجاز</h1>
+                                <p>Certificate of Achievement</p>
+                            </div>
+                            <div class="cert-brand">
+                                <span>زهرائيات الرياضة</span>
+                            </div>
+                        </div>
+
+                        <div class="certificate-body">
+                            <p class="presented-to">هذه الشهادة تـُمنح بفخر إلى:</p>
+                            <h2 id="cert-username" class="cert-username"></h2>
+                            <p class="achievement-description">
+                                تقديراً لإتمامه بنجاح اختبار المعرفة الكروية وتأكيد شغفه الكبير بنادي
+                                <strong id="cert-club-name"></strong>
+                            </p>
+
+                            <div class="performance-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value" id="cert-score"></div>
+                                    <div class="stat-label">النتيجة النهائية</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="cert-correct-answers"></div>
+                                    <div class="stat-label">الإجابات الصحيحة</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="cert-questions-count"></div>
+                                    <div class="stat-label">مجموع الأسئلة</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="certificate-footer">
+                            <div class="signature-section">
+                                <!-- توقيع يدوي أنيق مع خربشات -->
+                                <div class="signature-container">
+                                    <div class="signature-wrapper">
+                                        <span class="signature-flourish flourish-left">✒</span>
+                                        <div class="handwritten-signature">
+                                            زهراء عدنان 
+                                        </div>
+                                        <span class="signature-flourish flourish-right">✨</span>
+                                    </div>
+                                    <div class="signature-underline"></div>
+                                    <span class="signature-title">مؤسس زهرائيات الرياضة</span>
+                                </div>
+                            </div>
+                            <div class="date-section">
+                                <div id="cert-date" class="date-value"></div>
+                                <div class="date-line"></div>
+                                <span class="date-label">تاريخ الإصدار</span>
+                            </div>
+                             <div class="seal-section">
+                                <div class="seal">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>إصدار رسمي</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cert-club-logo-container" class="club-logo-watermark"></div>
+                    </div>
+                </div>
+                
+                <div class="certificate-actions">
+                    <button id="download-cert-btn" class="cta-btn">
+                        <i class="fas fa-download"></i>
+                        تحميل الشهادة
+                    </button>
+                    <button id="restart-btn" class="secondary-btn">
+                        <i class="fas fa-home"></i>
+                        العودة للرئيسية
+                    </button>
+                </div>
+                
+                <div class="social-share">
+                    <h3>شارك إنجازك مع العالم:</h3>
+                    <div class="social-icons">
+                        <a href="#" id="share-whatsapp" class="social-icon whatsapp" target="_blank" title="مشاركة عبر واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" id="share-twitter" class="social-icon twitter" target="_blank" title="مشاركة عبر تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" id="share-facebook" class="social-icon facebook" target="_blank" title="مشاركة عبر فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" id="share-linkedin" class="social-icon linkedin" target="_blank" title="مشاركة عبر لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="scrpit.js"></script>
+</body>
+</html>
