@@ -1,3 +1,4 @@
+
 :root {
     --primary-green: #00ff85;
     --primary-blue: #0099ff;
@@ -601,126 +602,101 @@ input[type="text"]:focus {
     font-size: 1.1rem; 
 }
 
-/* Certificate Section - Redesigned */
+
+/* === Certificate Section - NEW VERTICAL MOBILE DESIGN === */
 .certificate-wrapper {
-    max-width: 1100px;
+    max-width: 500px;
     margin: 2rem auto;
-    padding: 10px;
-    background: linear-gradient(145deg, #1e2328, #14181c);
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    background: none;
+    box-shadow: none;
 }
 
 body.light-mode .certificate-wrapper {
-    background: linear-gradient(145deg, #e9edf1, #ffffff);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    background: none;
+    box-shadow: none;
 }
 
 .certificate-container {
-    background: var(--dark-bg);
-    border: 2px solid var(--grey-dark);
-    border-radius: 15px;
-    padding: 3rem;
-    position: relative;
-    color: var(--text-dark);
-    overflow: hidden;
-    text-align: center;
-}
-
-body.light-mode .certificate-container {
     background: #ffffff;
-    border-color: #dee2e6;
-    color: var(--text-light);
+    color: #333;
+    font-family: 'Cairo', sans-serif;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .certificate-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid var(--grey-dark);
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
+    width: 100%;
 }
 
-body.light-mode .certificate-header {
-    border-color: #dee2e6;
+.cert-title-group h1 {
+    font-family: var(--font-header);
+    color: #1e90ff; /* Blue color */
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.cert-title-group p {
+    color: #777;
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 .cert-logo img {
-    width: 60px;
-    height: 60px;
-    filter: brightness(0) invert(1);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
 }
 
-body.light-mode .cert-logo img {
-    filter: none;
-}
-
-.cert-title h1 {
-    font-family: var(--font-header);
-    font-size: 2.8rem;
-    color: var(--primary-green);
-    margin: 0;
-}
-.cert-title p {
+.cert-presented-to {
+    color: #555;
     font-size: 1.1rem;
-    color: #aaa;
-    margin: 0;
-}
-body.light-mode .cert-title h1 { color: var(--primary-blue); }
-
-.cert-brand {
-    font-family: var(--font-header);
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.certificate-body {
-    margin-bottom: 2rem;
-}
-
-.presented-to {
-    font-size: 1.2rem;
-    color: #aaa;
-    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .cert-username {
-    font-family: var(--font-header);
+    padding: 0.7rem 2.5rem;
+    background: linear-gradient(135deg, #29f5e4, #22a7f0);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.8rem;
     font-weight: 700;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .achievement-description {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 80%;
-    margin: 0 auto 2.5rem auto;
+    font-size: 1rem;
+    color: #666;
+    max-width: 90%;
+    line-height: 1.7;
 }
+
 .achievement-description strong {
-    color: var(--primary-green);
+    color: #1e90ff;
     font-weight: 700;
-}
-body.light-mode .achievement-description strong {
-    color: var(--primary-blue);
 }
 
 .performance-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin: 2.5rem 0;
-    padding: 2rem;
-    background: var(--dark-card);
-    border-radius: 10px;
-}
-
-body.light-mode .performance-stats {
     background: #f8f9fa;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .stat-item {
@@ -731,117 +707,97 @@ body.light-mode .performance-stats {
 .stat-value {
     font-size: 2.5rem;
     font-weight: 900;
-    color: var(--primary-gold);
+    color: #ffc400;
 }
 
 .stat-label {
-    font-size: 1rem;
-    color: #aaa;
-}
-
-.certificate-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    border-top: 2px solid var(--grey-dark);
-    padding-top: 2rem;
-    margin-top: 2rem;
-}
-body.light-mode .certificate-footer {
-    border-color: #dee2e6;
-}
-
-.signature-section, .date-section, .seal-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.signature-placeholder {
-    width: 150px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed var(--grey-dark);
-    border-radius: 8px;
-    color: var(--grey-dark);
-    font-size: 2rem;
-}
-
-.signature-line, .date-line {
-    width: 80%;
-    height: 1px;
-    background: var(--grey-dark);
-}
-
-.signature-name {
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-.signature-title, .date-label {
     font-size: 0.9rem;
-    color: #aaa;
-}
-.date-value {
-    font-weight: 700;
-    font-size: 1.1rem;
+    color: #888;
+    font-weight: 600;
 }
 
-.seal {
-    width: 100px;
-    height: 100px;
-    border: 3px solid var(--primary-gold);
-    border-radius: 50%;
+.cert-issuer-section {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.issuer-name {
+    display: inline-block;
+    padding: 0.7rem 3rem;
+    background: linear-gradient(135deg, #d4af37, #b48c2c);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.issuer-title {
+    margin-top: 0.5rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.cert-footer {
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: var(--primary-gold);
+    gap: 1rem;
 }
-.seal i {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
-.seal span {
-    font-size: 0.8rem;
+
+.date-value {
     font-weight: bold;
+    color: #333;
 }
 
+.date-label {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.official-seal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.official-seal i { /* For a trophy icon from an icon library like Font Awesome */
+    font-size: 3rem;
+    color: #ffc400;
+}
+
+.official-seal span {
+    color: #aaa;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Hide old watermark */
 .club-logo-watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.05;
-    z-index: -1;
+    display: none;
 }
 
-.club-logo-watermark img {
-    width: 400px;
-    height: 400px;
-    object-fit: contain;
-    filter: grayscale(1) brightness(0.5);
-}
-
-/* Certificate Actions */
+/* Certificate Actions (Kept from original design) */
 .certificate-actions {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 1rem;
+    margin-top: 2rem;
     flex-wrap: wrap;
 }
 
 .certificate-actions .cta-btn,
 .certificate-actions .secondary-btn {
-    padding: 1.2rem 2.5rem;
-    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    min-width: 220px;
+    min-width: 180px;
     justify-content: center;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -865,11 +821,11 @@ body.light-mode .certificate-footer {
     background: #3c4248;
 }
 
-/* Social Share */
+/* Social Share (Kept from original design) */
 .social-share {
     text-align: center;
-    margin-top: 4rem;
-    padding-top: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
     border-top: 2px solid var(--grey-dark);
 }
 
@@ -878,10 +834,9 @@ body.light-mode .social-share {
 }
 
 .social-share h3 {
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
     color: var(--primary-green);
-    text-shadow: 0 2px 8px rgba(0, 255, 133, 0.3);
 }
 body.light-mode .social-share h3 {
     color: var(--primary-blue);
@@ -890,27 +845,18 @@ body.light-mode .social-share h3 {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
 .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
 }
 
 .social-icon:hover {
     transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .social-icon.whatsapp { background: #25D366; }
@@ -918,41 +864,34 @@ body.light-mode .social-share h3 {
 .social-icon.facebook { background: #1877F2; }
 .social-icon.linkedin { background: #0077B5; }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .certificate-container {
-        padding: 2rem;
-    }
-}
 
-@media (max-width: 768px) {
-    .certificate-footer {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .performance-stats {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .cert-username {
-        font-size: 2.2rem;
-    }
-    .cert-title h1 {
-        font-size: 2rem;
-    }
-    .certificate-actions {
-        flex-direction: column;
-        align-items: center;
-    }
-    .clubs-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-}
+/* === Responsive Design === */
 
 @media (max-width: 480px) {
     main {
-        padding: 1rem;
+        padding: 1rem 3%;
     }
+    
+    .certificate-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .cert-title-group h1 {
+        font-size: 1.8rem;
+    }
+
+    .cert-username {
+        font-size: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .issuer-name {
+        font-size: 1.3rem;
+    }
+
     .intro-container {
         padding: 1.5rem;
         margin: 2rem auto;
@@ -972,7 +911,9 @@ body.light-mode .social-share h3 {
         height: 80px;
     }
 }
-/* تنسيق شعار الموقع في الهيدر - إطار رفيع */
+
+
+/* تنسيق شعار الموقع في الهيدر - إطار رفيع (from original) */
 .logo-circle {
     width: 50px;
     height: 50px;
@@ -993,27 +934,6 @@ body.light-mode .social-share h3 {
     object-fit: cover;
 }
 
-/* تنسيق شعار الشهادة - إطار رفيع */
-.cert-logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-gold), #ffd700);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border: 1px solid var(--primary-gold); /* إطار رفيع */
-    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
-}
-
-.cert-logo img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 /* تأثيرات hover خفيفة */
 .logo-circle:hover, .cert-logo:hover {
     transform: scale(1.03);
@@ -1026,48 +946,7 @@ body.light-mode .logo-circle {
     border: 1px solid rgba(0, 153, 255, 0.4); /* إطار رفيع */
 }
 
-body.light-mode .cert-logo {
-    background: linear-gradient(135deg, #b8860b, #daa520);
-    border: 1px solid #b8860b; /* إطار رفيع */
-}
-
 /* جعل الظلال أخف */
 body.light-mode .logo-circle {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .cert-logo {
-    box-shadow: 0 2px 8px rgba(184, 134, 11, 0.15);
-
-}
-/* الأنماط الافتراضية للشاشات الأكبر */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.navbar {
-  display: flex; /* يجعل العناصر في صف واحد */
-}
-
-/* -------------------------------------- */
-
-/* استعلام الوسائط: الأنماط التي تُطبق عندما يكون عرض الشاشة 600 بكسل أو أقل */
-@media screen and (max-width: 600px) {
-  .navbar {
-    flex-direction: column; /* يجعل العناصر في عمود واحد */
-  }
-  .navbar a {
-    text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-  }
-  /* يمكنك هنا تغيير أحجام الخطوط، إخفاء بعض العناصر، إلخ */
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-img {
-  max-width: 100%; /* العرض الأقصى للصورة هو 100% من عرض العنصر الأب */
-  height: auto;    /* يُحافظ على نسبة أبعاد الصورة */
-  display: block;  /* لمنع المشاكل في بعض المتصفحات */
 }
