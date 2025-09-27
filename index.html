@@ -191,118 +191,120 @@
             </div>
         </section>
 
-       <section id="certificate">
-            <div class="section-background" style="background-image: url('https://i.imgur.com/5Z8wK2p.jpg')"></div>
-            <div class="section-content">
-                <h2>تهانينا! لقد أكملت التحدي بنجاح</h2>
-                <p class="section-subtitle">إنجازك يستحق التقدير، شارك شهادتك مع الأصدقاء</p>
+      <!-- استبدال قسم الشهادة في index.html -->
+<section id="certificate">
+    <div class="section-background" style="background-image: url('https://i.imgur.com/5Z8wK2p.jpg')"></div>
+    <div class="section-content">
+        <h2>تهانينا! لقد أكملت التحدي بنجاح</h2>
+        <p class="section-subtitle">إنجازك يستحق التقدير، شارك شهادتك مع الأصدقاء</p>
+        
+        <div class="certificate-wrapper">
+            <div class="certificate-container square-certificate" id="certificate-to-download">
                 
-                <div class="certificate-wrapper">
-                    <div class="certificate-container" id="certificate-to-download">
-                        
-                        <div class="certificate-header">
-                            <div class="cert-logo">
-                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="شعار الشهادة">
-                            </div>
-                            <div class="cert-title">
-                                <h1>شهادة إنجاز</h1>
-                                <p>Certificate of Achievement</p>
-                            </div>
-                            <div class="cert-brand">
-                                <span>زهرائيات الرياضة</span>
-                            </div>
-                        </div>
-
-                        <div class="certificate-body">
-                            <p class="presented-to">هذه الشهادة تـُمنح بفخر إلى:</p>
-                            <h2 id="cert-username" class="cert-username"></h2>
-                            <p class="achievement-description">
-                                تقديراً لإتمامه بنجاح اختبار المعرفة الكروية وتأكيد شغفه الكبير بنادي
-                                <strong id="cert-club-name"></strong>
-                            </p>
-
-                            <div class="performance-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value" id="cert-score"></div>
-                                    <div class="stat-label">النتيجة النهائية</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value" id="cert-correct-answers"></div>
-                                    <div class="stat-label">الإجابات الصحيحة</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value" id="cert-questions-count"></div>
-                                    <div class="stat-label">مجموع الأسئلة</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="certificate-footer">
-                            <div class="signature-section">
-                                <!-- توقيع يدوي أنيق مع خربشات -->
-                                <div class="signature-container">
-                                    <div class="signature-wrapper">
-                                        <span class="signature-flourish flourish-left">✒</span>
-                                        <div class="handwritten-signature">
-                                            زهراء عدنان 
-                                        </div>
-                                        <span class="signature-flourish flourish-right">✨</span>
-                                    </div>
-                                    <div class="signature-underline"></div>
-                                    <span class="signature-title">مؤسس زهرائيات الرياضة</span>
-                                </div>
-                            </div>
-                            <div class="date-section">
-                                <div id="cert-date" class="date-value"></div>
-                                <div class="date-line"></div>
-                                <span class="date-label">تاريخ الإصدار</span>
-                            </div>
-                             <div class="seal-section">
-                                <div class="seal">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>إصدار رسمي</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="cert-club-logo-container" class="club-logo-watermark"></div>
+                <div class="certificate-header">
+                    <div class="cert-brand">
+                        <span>زهرائيات الرياضة</span>
+                    </div>
+                    <div class="cert-logo">
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="شعار الشهادة">
+                    </div>
+                    <div class="cert-title">
+                        <h1>شهادة إنجاز</h1>
+                        <p>Certificate of Achievement</p>
                     </div>
                 </div>
-                
-                <div class="certificate-actions">
-                    <button id="download-cert-btn" class="cta-btn">
-                        <i class="fas fa-download"></i>
-                        تحميل الشهادة
-                    </button>
-                    <button id="restart-btn" class="secondary-btn">
-                        <i class="fas fa-home"></i>
-                        العودة للرئيسية
-                    </button>
-                </div>
-                
-                <div class="social-share">
-                    <h3>شارك إنجازك مع العالم:</h3>
-                    <div class="social-icons">
-                        <a href="#" id="share-whatsapp" class="social-icon whatsapp" target="_blank" title="مشاركة عبر واتساب">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" id="share-twitter" class="social-icon twitter" target="_blank" title="مشاركة عبر تويتر">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" id="share-facebook" class="social-icon facebook" target="_blank" title="مشاركة عبر فيسبوك">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" id="share-linkedin" class="social-icon linkedin" target="_blank" title="مشاركة عبر لينكد إن">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+
+                <div class="certificate-body">
+                    <p class="presented-to">هذه الشهادة تـُمنح بفخر إلى:</p>
+                    <h2 id="cert-username" class="cert-username"></h2>
+                    
+                    <div class="achievement-section">
+                        <p class="achievement-description">
+                            تقديراً لإتمامه بنجاح اختبار المعرفة الكروية وتأكيد شغفه الكبير بنادي
+                            <strong id="cert-club-name"></strong>
+                        </p>
+                    </div>
+
+                    <div class="performance-stats">
+                        <div class="stat-item">
+                            <div class="stat-value" id="cert-score"></div>
+                            <div class="stat-label">النتيجة النهائية</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="cert-correct-answers"></div>
+                            <div class="stat-label">الإجابات الصحيحة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="cert-questions-count"></div>
+                            <div class="stat-label">مجموع الأسئلة</div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="certificate-footer">
+                    <div class="signature-section">
+                        <div class="signature-container">
+                            <div class="signature-wrapper">
+                                <span class="signature-flourish flourish-left">✒</span>
+                                <div class="handwritten-signature">
+                                    زهراء عدنان 
+                                </div>
+                                <span class="signature-flourish flourish-right">✨</span>
+                            </div>
+                            <div class="signature-underline"></div>
+                            <span class="signature-title">مؤسس زهرائيات الرياضة</span>
+                        </div>
+                    </div>
+                    <div class="date-section">
+                        <div id="cert-date" class="date-value"></div>
+                        <div class="date-line"></div>
+                        <span class="date-label">تاريخ الإصدار</span>
+                    </div>
+                     <div class="seal-section">
+                        <div class="seal">
+                            <i class="fas fa-trophy"></i>
+                            <span>إصدار رسمي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cert-club-logo-container" class="club-logo-watermark"></div>
             </div>
-        </section>
+        </div>
+        
+        <div class="certificate-actions">
+            <button id="download-cert-btn" class="cta-btn">
+                <i class="fas fa-download"></i>
+                تحميل الشهادة
+            </button>
+            <button id="restart-btn" class="secondary-btn">
+                <i class="fas fa-home"></i>
+                العودة للرئيسية
+            </button>
+        </div>
+        
+        <div class="social-share">
+            <h3>شارك إنجازك مع العالم:</h3>
+            <div class="social-icons">
+                <a href="#" id="share-whatsapp" class="social-icon whatsapp" target="_blank" title="مشاركة عبر واتساب">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" id="share-twitter" class="social-icon twitter" target="_blank" title="مشاركة عبر تويتر">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" id="share-facebook" class="social-icon facebook" target="_blank" title="مشاركة عبر فيسبوك">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" id="share-linkedin" class="social-icon linkedin" target="_blank" title="مشاركة عبر لينكد إن">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="scrpit.js"></script>
 </body>
-
 </html>
