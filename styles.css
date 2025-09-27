@@ -1038,4 +1038,36 @@ body.light-mode .logo-circle {
 
 body.light-mode .cert-logo {
     box-shadow: 0 2px 8px rgba(184, 134, 11, 0.15);
+
+}
+/* الأنماط الافتراضية للشاشات الأكبر */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.navbar {
+  display: flex; /* يجعل العناصر في صف واحد */
+}
+
+/* -------------------------------------- */
+
+/* استعلام الوسائط: الأنماط التي تُطبق عندما يكون عرض الشاشة 600 بكسل أو أقل */
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* يجعل العناصر في عمود واحد */
+  }
+  .navbar a {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  /* يمكنك هنا تغيير أحجام الخطوط، إخفاء بعض العناصر، إلخ */
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+img {
+  max-width: 100%; /* العرض الأقصى للصورة هو 100% من عرض العنصر الأب */
+  height: auto;    /* يُحافظ على نسبة أبعاد الصورة */
+  display: block;  /* لمنع المشاكل في بعض المتصفحات */
 }
